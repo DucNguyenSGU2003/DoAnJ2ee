@@ -1,0 +1,36 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /UniCharity
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/UniversityCharityDB
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    cache: false
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+
+jwt:
+  signerKey: "K1YJD9Mt3V3wklqFpuYQXZhKSMdh6UZyLBb/nvXKBk1Lw3yXtRYTcpLqwOa8ACsc"
+  expirationTime: 259200000
+
+
+
